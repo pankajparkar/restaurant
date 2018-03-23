@@ -1,17 +1,9 @@
 <rm-navbar></rm-navbar>
 <div class="container">
-  <mat-sidenav-container class="example-container">
-    <mat-sidenav #sidenav [mode]="mode.value">
-      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-      <p>
-        <rm-sidebar></rm-sidebar>
-      </p>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>
-      <p>
-        <rm-content></rm-content>
-      </p>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+  <mat-drawer-container class="main-container">
+    <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
+    <mat-drawer-content>
+      <rm-content></rm-content>
+    </mat-drawer-content>
+  </mat-drawer-container>
 </div>
